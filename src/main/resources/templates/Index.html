@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        <a class="nav-link" href="/SobreMi">Sobre Mi</a>
+        <a class="nav-link" href="/Proyectos">Proyectos</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero bg-light text-center text-white" style="background: url('/Imagenes/ImagenFondo.png') no-repeat center center / cover;">
+  <div class="container py-5 text-start"> <!-- Cambiado text-center a text-start -->
+    <h1 class="display-4">¡Bienvenido!</h1>
+    <p class="lead">Soy <span>Joseph Tello</span> Estudiante de 4to ciclo de la carrera de Ingeniería de Sistemas de Información.</p>
+    <a href="/Proyectos">
+      <button class="Ir-Proyectos">Proyectos</button>
+    </a>
+    <a download href="/Imagenes/ImagenFondo.png">
+      <button class="Descargar-cv">Descargar CV</button>
+    </a>
+  </div>
+</section>
+
+
+
+
+
+<div class="about">
+  <img src="/Imagenes/ImagenSobreMi.jpg" alt="Sobre Mi Imagen">
+  <div class="about-info">
+    <h2>Sobre Mi</h2>
+    <div class="divider"></div>
+    <p>Soy Joseph Tello, Soy estudiante de la carrera de Ingenieria de Sistemas de Información, me encuentro entrando al 4to ciclo de la carrera, tengo conocimientos en lenguajes de programación como Java, Python, C++, JavaScript.</p>
+    
+    <p>Soy una persona que le gusta aprender cosas nueva sobre todo en temas de programación, me gusta jugar videojuegos, como Dragón ball Sparking Zero, Super Smash Bros Ultimate, Pokemón, Free Fire, tambien me gusta jugar juegos de mesa como clue, monopoly, tambien me gusta jugar basket</p>
+    <a href="/SobreMi">
+      <button class="Ir-Proyectos">Mas Información</button>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="projects" class="container">
+    <!-- Título principal -->
+    <h1 class="main-title" style="font-weight: bold;">Proyectos</h1>
+
+    <!-- Card del proyecto -->
+    <div id="project" class="project-card">
+      <!-- Contenido del proyecto -->
+      <div class="content">
+        <h2 class="project-title" style="font-weight: bold;">1. Ratio</h2>
+        <p class="project-description">Es una landing Page de una empresa de comida rapida llamada Ratio, su principal funcion es poder visualizar de forma interactiva los productos del restaurante, tambien de dar una descripcion breve de la empresa y su deber con sus clientes, ofrece la opcion de seleccionar el producto que queramos para poder ordenarlo, por ultimo ofrece un chatbot para diversas consultas de clientes.</p>
+        <div class="tags">
+          <div># HTML</div>
+          <div># CSS</div>
+          <div># Java</div>
+          <div># Spring Boot</div>
+        </div>
+      </div>
+      <!-- Imagen del proyecto -->
+      <div class="image">
+        <img src="/Imagenes/ImagenRatio.png" alt="Captura del proyecto">
+        <!-- Botón circular -->
+        <a href="https://github.com/usuario/repositorio" class="button-circle" aria-label="GitHub del proyecto">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm4.71 8.71-4 4a1 1 0 0 1-1.42 0l-4-4a1 1 0 0 1 1.42-1.42L11 11.59V7a1 1 0 0 1 2 0v4.59l2.29-2.3a1 1 0 0 1 1.42 1.42Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Joseph Tello. Todos los derechos reservados.</p>
+    <p>Desarrollado con pasión por un estudiante de Ingeniería de Sistemas en la Universidad San Ignacio de Loyola.</p>
+    <div class="social-icons d-flex justify-content-center"> <!-- Clase d-flex para colocar las imágenes en línea -->
+      <a href="https://whatsapp.com/send/?phone=51977394307" target="_blank" class="social-icon">
+        <img th:src="@{imagenes/Imagen8.jpg}" alt="WhatsApp">
+      </a>
+      <a href="https://www.linkedin.com/in/joseph-t-9aa23a2b6/" target="_blank" class="social-icon">
+        <img th:src="@{imagenes/Imagen9.png}" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
