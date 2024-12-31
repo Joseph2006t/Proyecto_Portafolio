@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* General Styles */
 body {
@@ -139,7 +143,7 @@ a {
 
 .about-info{
 	grid-column: 5/10;
-	padding: 3em;
+	padding: 0.7em;
 }
 
 .about-info h2{
@@ -163,6 +167,64 @@ a {
 }
 
 
+
+/* Estilos responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+	.about {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.about img {
+		grid-column: 1/1;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.about-info {
+		grid-column: 1/1;
+		padding: 1.5em;
+	}
+
+	.about-info h2 {
+		font-size: 1.5em;
+	}
+
+	.divider {
+		width: 100px;
+		
+	}
+
+	.about p {
+		font-size: 0.9em;
+	}
+}
+
+/* Estilos para pantallas extra pequeñas */
+@media screen and (max-width: 480px) {
+	.about img {
+		width: 100%;
+	}
+
+	.about-info {
+		padding: 1em;
+	}
+
+	.about-info h2 {
+		font-size: 1.2em;
+	}
+
+	.divider {
+		width: 80px;
+		
+	}
+}
+
+
+
+
+
+
 /* Título principal Proyectos */
 .main-title {
   text-align: center;
@@ -180,17 +242,6 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #121212; /* Fondo oscuro general */
-  color: #e0e0e0;
-}
-
-
-
-
 
 
 
@@ -365,6 +416,43 @@ body {
 
 
 
+/* General styling for the section */
+.destacados {
+  padding: 5rem 0;
+}
+
+.destacados h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Centering the icons */
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for images */
+.social-icon img {
+  width: 80px; /* Smaller size */
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
+}
+
+/* Animation on hover */
+.social-icon img:hover {
+  transform: scale(1.2); /* Enlarges the image */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+/* Text below the images */
+.social-icon h4 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+}
 
 
 

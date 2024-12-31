@@ -15,20 +15,18 @@ public class IndexController {
 		return "Index";
 	}
 	
-	@GetMapping("/SobreMi") //aparecera esta funcion cuando en la pagina web, este en la ubicacion /SobreMi
+	@GetMapping("/SobreMi")
 	public String SobreMi(Model model) {
-		model.addAttribute("titulo2","SobreMi");
-		
+		model.addAttribute("titulo2","Sobre Mi");
 		return "SobreMi";
 	}
-	@GetMapping("/Proyectos") //aparecera esta funcion cuando en la pagina web, este en la ubicacion /Proyectos
+
+	
+	@GetMapping("/Proyectos")
 	public String Proyectos(Model model) {
 		model.addAttribute("titulo3","Proyectos");
 		return "Proyectos";
 	}
-	
-	
-	
-	
+
 
 }
