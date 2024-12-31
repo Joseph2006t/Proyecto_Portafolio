@@ -52,6 +52,17 @@ body {
   font-weight: bold;
 }
 
+.container-fluid img {
+  width: 80px; /* Smaller size */
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
+}
+
+/* Animation on hover en navbar*/
+.container-fluid img:hover {
+  transform: scale(1.2); /* Enlarges the image */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
 
 
 
